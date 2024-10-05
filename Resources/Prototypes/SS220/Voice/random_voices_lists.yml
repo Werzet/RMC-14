@@ -6,3 +6,13 @@
   - adventure_core
   - sentrybot
   - fact_core
+
+- type: randomVoicesList
+  id: Xeno
+  voices:
+  - lambert
+  - ekko
+  - bandit
+  - sidorovich
+  - johnny
+  - richardson
