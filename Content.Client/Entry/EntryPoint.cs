@@ -19,6 +19,7 @@ using Content.Client.Radiation.Overlays;
 using Content.Client.Replay;
 using Content.Client.Screenshot;
 using Content.Client.Singularity;
+using Content.Client.SS220.Discord;
 using Content.Client.Stylesheets;
 using Content.Client.Viewport;
 using Content.Client.Voting;
@@ -73,6 +74,8 @@ namespace Content.Client.Entry
         [Dependency] private readonly ILogManager _logManager = default!;
         [Dependency] private readonly ContentReplayPlaybackManager _replayMan = default!;
         [Dependency] private readonly DebugMonitorManager _debugMonitorManager = default!;
+
+        [Dependency] private readonly DiscordPlayerInfoManager _discordPlayerInfoManager = default!; // SS220 discord info manager
 
         public override void Init()
         {
@@ -163,6 +166,8 @@ namespace Content.Client.Entry
             _userInterfaceManager.SetDefaultTheme("SS14DefaultTheme");
             _userInterfaceManager.SetActiveTheme(_configManager.GetCVar(CVars.InterfaceTheme));
             _documentParsingManager.Initialize();
+
+            _discordPlayerInfoManager.Initialize();
 
             _baseClient.RunLevelChanged += (_, args) =>
             {
