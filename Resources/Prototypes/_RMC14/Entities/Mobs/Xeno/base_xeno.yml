@@ -253,6 +253,8 @@
   - type: TacticalMapUser
     actionId: RMCActionOpenTacticalMapXeno
     xenos: true
+  - type: TTS
+    randomVoicesList: Xeno
 
 - type: entity
   abstract: true

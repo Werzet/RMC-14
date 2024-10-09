@@ -240,6 +240,7 @@ namespace Content.Server.GameTicking
                 _chatSystem.DispatchStationAnnouncement(station,
                     Loc.GetString("latejoin-arrival-announcement",
                         ("character", MetaData(mob).EntityName),
+                        ("gender", character.Gender), //SS220-upstream-merge
                         ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))),
                     Loc.GetString("latejoin-arrival-sender"),
                     playDefaultSound: false);
